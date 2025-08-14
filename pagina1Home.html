@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css" />
+
+  <title>Deficiência Neurológica</title>
+
+</head>
+
+<body>
+
+  <header role="banner">
+    <h1>Deficiência Neurológica</h1>
+  </header>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <ul>
+      <li><a href="pagina1Home.html">Home</a></li>
+      <li><a href="pagina2SaibaMais.html">Saiba mais</a></li>
+      <li><a href="pagina3Formulario.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo-principal" role="main">
+    <!-- Seção introdutória -->
+    <section aria-labelledby="titulo-definicao">
+      <h2 id="titulo-definicao">O que é uma Deficiência Neurológica?</h2>
+      <p>A deficiência neurológica refere-se a alterações na função do sistema nervoso, que podem afetar diferentes partes do corpo. Essas alterações são causadas por lesões ou disfunções no cérebro, na medula espinhal, nos nervos periféricos ou nos músculos conectados.</p>
+    </section>
+
+    <!-- Seção de sintomas -->
+    <section class="secao-caixa" aria-labelledby="titulo-sintomas">
+      <h2 id="titulo-sintomas">Sintomas Possíveis</h2>
+      <p>Os sinais de uma deficiência neurológica variam de acordo com a área atingida e a gravidade do quadro. Entre os sintomas mais comuns estão:</p>
+      <ul>
+        <li><strong>Problemas motores:</strong>  fraqueza muscular, paralisia, tremores, dificuldades de coordenação.</li>
+        <li><strong>Alterações sensoriais:</strong> dormência, formigamento, sensibilidade reduzida, distúrbios de visão, audição ou paladar.</li>
+        <li><strong>Comprometimentos cognitivos:</strong> dificuldades de memória, atenção, linguagem e raciocínio.</li>
+        <li><strong>Sintomas emocionais:</strong> ansiedade, depressão, alterações de humor.</li>
+        <li><strong>Crises convulsivas:</strong> como epilepsia, que pode causar perda de consciência ou movimentos involuntários.</li>
+      </ul>
+      <p> Fonte: 
+      <a href="https://telemedicinamorsch.com.br/blog/transtorno-neurologico#:~:text=%E2%80%9CS%C3%A3o%20doen%C3%A7as%20que%20se%20devem,les%C3%A3o%20estrutural%20do%20sistema%20nervoso.%E2%80%9D" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Abrir artigo original sobre transtorno neurológico no site da Telemedicina Morsch">
+      <strong>Telemedicina Morsch</strong>
+      </a>
+      </p>
+    </section>
+
+    <!-- Seção informativa -->
+    <section class="destaque-caixa" role="region" aria-label="Informações sobre o cérebro">
+      <h2 class="texto-branco">Um Olhar Sobre o Cérebro e a Inclusão</h2>
+      <p>O cérebro é o principal órgão de comando do corpo humano. Por ser uma estrutura altamente complexa, qualquer comprometimento pode gerar diferentes tipos de transtornos neurológicos, que impactam não só o corpo, mas também o comportamento, as emoções e a cognição.</p>
+      <p> Fonte:
+        <a href="https://brasilescola.uol.com.br/biologia/cerebro-humano.htm#:~:text=O%20c%C3%A9rebro%20%C3%A9%20a%20parte,e%20integra%C3%A7%C3%A3o%20de%20informa%C3%A7%C3%B5es%20sensoriais."
+        id="link-cerebro"
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Abrir artigo original sobre funcionamento do cérebro">
+        <strong>Brasil Escola </strong>
+        </a>
+      </p>
+    </section>
+
+    <!-- Exemplos -->
+    <section aria-labelledby="titulo-exemplos">
+      <h2 id="titulo-exemplos">Exemplos de Deficiências Neurológicas</h2>
+      <div class="grade-exemplos">
+        <div class="exemplo-item">Transtornos do Espectro Autista (TEA)</div>
+        <div class="exemplo-item">Lesões cerebrais traumáticas</div>
+        <div class="exemplo-item">Esclerose múltipla</div>
+        <div class="exemplo-item">Epilepsia</div>
+        <div class="exemplo-item">Doença de Parkinson</div>
+        <div class="exemplo-item">Demência (ex.: Alzheimer)</div>
+        <div class="exemplo-item">Acidente Vascular Cerebral (AVC)</div>
+        <div class="exemplo-item">Síndrome de Tourette</div>
+      </div>
+
+      <section class="secao-caixa" aria-labelledby="Saiba Mais">
+      <h2>Quer saber mais?</h2>
+      <p>Clique no botão abaixo para conhecer mais sobre os <strong>desafios enfrentados</strong> por pessoas portadoras de deficiências neurológicas:</strong></p>
+      <button class="botao-saiba-mais" onclick="window.location.href='pagina2SaibaMais.html'">
+        Saiba Mais
+      </button>
+      </section>
+    </section>
+
+    <!-- Plugin VLibras (original, fora do menu) -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Botão flutuante do menu de acessibilidade -->
+  <button id="btn-acessibilidade" aria-label="Abrir menu de acessibilidade" aria-haspopup="true" aria-controls="acessibilidade-opcoes" aria-expanded="false">
+    <i class="fas fa-universal-access" aria-hidden="true"></i>
+  </button>
+
+  <!-- Painel de opções de acessibilidade -->
+  <div id="acessibilidade-opcoes" role="region" aria-label="Opções de acessibilidade" tabindex="-1">
+    <button onclick="alterarFonte(1.1)" aria-label="Aumentar fonte">A+</button>
+    <button onclick="alterarFonte(0.9)" aria-label="Diminuir fonte">A-</button>
+    <button onclick="alternarContraste()" aria-label="Alternar contraste">☯</button>
+  </div>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+    const btnAcessibilidade = document.getElementById("btn-acessibilidade");
+    const painelAcessibilidade = document.getElementById("acessibilidade-opcoes");
+
+    btnAcessibilidade.addEventListener("click", () => {
+      const visivel = painelAcessibilidade.style.display === "block";
+      painelAcessibilidade.style.display = visivel ? "none" : "block";
+      btnAcessibilidade.setAttribute("aria-expanded", !visivel);
+      if (!visivel) {
+        painelAcessibilidade.focus();
+      }
+    });
+
+    function alterarFonte(fator) {
+      const corpo = document.body;
+      let fonteAtual = parseFloat(window.getComputedStyle(corpo).fontSize);
+      let novaFonte = fonteAtual * fator;
+
+      if (novaFonte < 12) novaFonte = 12;
+      if (novaFonte > 24) novaFonte = 24;
+
+      corpo.style.fontSize = novaFonte + "px";
+    }
+
+    function alternarContraste() {
+      document.documentElement.classList.toggle("contraste-alto");
+    }
+  </script>
+
+</body>
+</html>

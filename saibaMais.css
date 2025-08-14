@@ -1,0 +1,409 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Foco acessibilidade */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #7a00ff;
+  outline-offset: 3px;
+  background-color: #f3e6ff;
+  transition: all 0.3s ease;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2e1d50;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Navegação */
+nav {
+  background-color: #e0e0e0;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2e1d50;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #5d47a5;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Títulos */
+h2 {
+  color: #2e1d50;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Parágrafos */
+p {
+  text-align: center;
+}
+
+/* Texto branco */
+.texto-branco,
+.textoBranco {
+  color: #fafafa;
+}
+
+/* Seções e caixas */
+.box-section,
+.secao-caixa {
+  background-color: #ededed;
+  border-left: 5px solid #2e1d50;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  margin-left: 1rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.destaque-caixa {
+  background-color: #2e1d50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grade de exemplos */
+.grade-exemplos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Cartões */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 600px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.card img {
+  width: 600px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.card p {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Botão ação */
+.botao-contato {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #2e1d50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.botao-contato:hover {
+  background-color: #4a3a7f;
+}
+
+/* Vídeo */
+.video-container {
+  background-color: #eaeaea;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+video {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 10px;
+}
+
+/* Botões do vídeo */
+.video-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.video-buttons button {
+  background-color: #2e1d50;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.video-buttons button:hover,
+.video-buttons button:focus {
+  background-color: #4a3a7f;
+  outline: none;
+}
+
+/* Rodapé */
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Botão acessibilidade */
+#btn-acessibilidade {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  background-color: #2e1d50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#btn-acessibilidade:hover,
+#btn-acessibilidade:focus {
+  background-color: #4b2d7a;
+  outline: 3px solid #7a00ff;
+}
+
+/* Painel acessibilidade */
+#acessibilidade-opcoes {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background-color: #2e1d50;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 999;
+  width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#acessibilidade-opcoes button {
+  display: block;
+  width: 100%;
+  margin: 0.3rem 0;
+  background-color: #ffffff;
+  color: #2e1d50;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+#acessibilidade-opcoes button:hover {
+  background-color: #ddd;
+}
+
+/* Modo escuro / contraste alto */
+.contraste-alto body {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.contraste-alto a,
+.contraste-alto .texto-roxo,
+.contraste-alto h2,
+.contraste-alto label,
+.contraste-alto strong {
+  color: #5c4199;
+}
+
+.contraste-alto header,
+.contraste-alto main,
+.contraste-alto .box-section,
+.contraste-alto .secao-caixa,
+.contraste-alto .destaque-caixa,
+.contraste-alto footer {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.contraste-alto nav {
+  background-color: #3e2a6d;
+  color: #ffffff;
+}
+
+.contraste-alto nav a,
+.contraste-alto nav a:visited {
+  color: #ccc;
+}
+
+.contraste-alto nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contraste-alto .secao-caixa,
+.contraste-alto .box-section {
+  background-color: #3b3b3b;
+  border-left: 5px solid #5c4199;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.contraste-alto .destaque-caixa {
+  background-color: #444;
+  color: #ffffff;
+}
+
+.contraste-alto .card {
+  background-color: #2f2f2f;
+  color: #f0f0f0;
+  border: 1px solid #666;
+}
+
+.contraste-alto .botao-saiba-mais {
+  background-color: #5c4199;
+  color: white;
+}
+
+.contraste-alto .botao-saiba-mais:hover {
+  background-color: #777;
+}
+
+.contraste-alto input,
+.contraste-alto textarea {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #aaa;
+}
+
+.contraste-alto a:focus,
+.contraste-alto button:focus,
+.contraste-alto input:focus,
+.contraste-alto textarea:focus {
+  outline: 3px solid #aaa;
+  outline-offset: 3px;
+  background-color: #2a2a2a;
+}
+
+.contraste-alto #btn-acessibilidade {
+  background-color: #666;
+  color: white;
+}
+
+.contraste-alto #btn-acessibilidade:hover {
+  background-color: #999;
+}
+
+.contraste-alto #acessibilidade-opcoes {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.contraste-alto #acessibilidade-opcoes button {
+  background-color: #ddd;
+  color: #111;
+}
+
+.contraste-alto #acessibilidade-opcoes button:hover {
+  background-color: #bbb;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #acessibilidade-opcoes {
+    width: 90%;
+    right: 5%;
+    top: 60px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+}

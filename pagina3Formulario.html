@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Deficiência Neurológica</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="formulario.css" />
+</head>
+
+<body>
+  <header role="banner">
+    <h1>Entre em Contato</h1>
+  </header>
+
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="pagina1Home.html">Home</a></li>
+      <li><a href="pagina2SaibaMais.html">Saiba mais</a></li>
+      <li><a href="pagina3Formulario.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Seção de dúvidas  -->
+  <section class="secao-duvidas" role="region" aria-labelledby="titulo-duvidas">
+    <div class="div-inicio">
+      <h2 id="titulo-duvidas">Você tem dúvidas sobre Deficiências Neurológicas?</h2>
+      <p>Entre em contato conosco através do nosso <strong>formulário abaixo:</strong></p>
+    </div>
+  </section>
+
+  <div class="container">
+    <main role="main" id="conteudo-principal">
+      <section aria-labelledby="form-title" class="form-section">
+        <h2 id="form-title">Fale Conosco</h2>
+        <p>Todos os campos são obrigatórios.</p>
+
+        <form id="contatoForm" aria-describedby="form-title" role="form">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="pergunta">Sua pergunta:</label>
+          <textarea id="pergunta" name="pergunta" rows="4"></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+
+        <div id="mensagem" role="alert" aria-live="assertive" class="box-mensagem" tabindex="0"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Menu de Acessibilidade -->
+  <button id="btn-acessibilidade" aria-label="Abrir menu de acessibilidade" aria-haspopup="true" aria-controls="acessibilidade-opcoes">
+    <i class="fas fa-universal-access" aria-hidden="true"></i>
+  </button>
+
+  <div id="acessibilidade-opcoes" role="region" aria-label="Opções de acessibilidade">
+    <button onclick="alterarFonte(1.1)" aria-label="Aumentar Fonte">A+</button>
+    <button onclick="alterarFonte(0.9)" aria-label="Diminuir Fonte">A-</button>
+    <button onclick="alternarContraste()" aria-label="Alternar contraste">☯</button>
+  </div>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script>
+    const form = document.getElementById("contatoForm");
+    const mensagem = document.getElementById("mensagem");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const nome = document.getElementById("nome");
+      const email = document.getElementById("email");
+      const pergunta = document.getElementById("pergunta");
+
+      let erro = false;
+
+      [nome, email, pergunta].forEach(campo => {
+        if (!campo.value.trim()) {
+          campo.classList.add("input-erro");
+          erro = true;
+        } else {
+          campo.classList.remove("input-erro");
+        }
+      });
+
+      if (erro) {
+        mensagem.textContent = "Todos os campos devem ser preenchidos.";
+        mensagem.className = "erro box-mensagem";
+      } else {
+        mensagem.textContent = "Formulário enviado com sucesso!";
+        mensagem.className = "sucesso box-mensagem";
+        form.reset();
+      }
+
+      mensagem.focus();
+      mensagem.style.display = "block";
+
+      setTimeout(() => {
+        mensagem.style.display = "none";
+        mensagem.className = "box-mensagem";
+        mensagem.textContent = "";
+      }, 4000);
+    });
+
+    function alterarFonte(fator) {
+      document.body.style.fontSize = (parseFloat(getComputedStyle(document.body).fontSize) * fator) + "px";
+    }
+
+    function alternarContraste() {
+      document.documentElement.classList.toggle("contraste-alto");
+    }
+
+    const btnAcessibilidade = document.getElementById("btn-acessibilidade");
+    const painelAcessibilidade = document.getElementById("acessibilidade-opcoes");
+
+    btnAcessibilidade.addEventListener("click", () => {
+      const visivel = painelAcessibilidade.style.display === "block";
+      painelAcessibilidade.style.display = visivel ? "none" : "block";
+      painelAcessibilidade.focus();
+    });
+  </script>
+</body>
+</html>

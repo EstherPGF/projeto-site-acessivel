@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="saibaMais.css" />
+  <title>Desafios - Deficiência Neurológica</title>
+</head>
+<body>
+  <header role="banner">
+    <h1>Deficiência Neurológica - Saiba Mais</h1>
+  </header>
+
+  <nav role="navigation" aria-label="Menu principal">
+    <ul>
+      <li><a href="pagina1Home.html">Home</a></li>
+      <li><a href="pagina2SaibaMais.html">Saiba mais</a></li>
+      <li><a href="pagina3Formulario.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo-principal" role="main">
+    <section aria-labelledby="titulo-desafios">
+      <h2 id="titulo-desafios">Principais Desafios Enfrentados</h2>
+
+      <p class="intro-text">
+        Deficiência refere-se a uma condição de longo prazo que causa impedimentos físicos, mentais, intelectuais ou sensoriais que, em interação com diferentes barreiras, podem dificultar a participação plena e efetiva na sociedade em igualdade de condições.<br><br>
+        Por isso, pessoas portadoras de deficiência neurológica enfrentam diversos desafios no dia a dia relacionados à acessibilidade, dentre eles a acessibilidade digital. Confira mais sobre os desafios no vídeo abaixo:
+      </p>
+
+      <div class="video-container">
+        <video id="meuVideo" controls  poster="AVISO.png">
+          <source src="videoWeb.mp4" type="video/mp4" />
+          <source src="videoWeb.ogg" type="video/ogg" />
+          <track src="audiodescricaoDeficienciaWeb.vtt" kind="descriptions" srclang="pt" label="Audiodescrição" />
+          <track src="legendaDeficienciaWeb.vtt" kind="subtitles" srclang="pt" label="Português" default />
+          <track src="captionsDeficienciaWeb.vtt" kind="captions" srclang="pt" label="Legendas com som" default />
+          Seu navegador não suporta o vídeo.
+        </video>
+      </div>
+
+      <div class="video-buttons" role="group" aria-label="Controles do vídeo">
+        <button id="btnPlay" aria-label="Reproduzir vídeo">
+          <i class="fas fa-play" aria-hidden="true"></i> Play
+        </button>
+        <button id="btnPause" aria-label="Pausar vídeo">
+          <i class="fas fa-pause" aria-hidden="true"></i> Pause
+        </button>
+        <button id="btnReiniciar" aria-label="Reiniciar vídeo">
+          <i class="fas fa-rotate-right" aria-hidden="true"></i> Reiniciar
+        </button>
+      </div>
+
+    </section>
+
+    <section class="box-section" aria-labelledby="titulo-outras-dificuldades">
+      <h2 id="titulo-outras-dificuldades" class="section-title-left">Além disso, existem outras dificuldades, dentre elas:</h2>
+    </section>
+
+    <section class="image-grid" role="list">
+      <article class="card" role="listitem">
+        <img src="desafiosEnfrentados (2).png" alt="Ilustração de acesso a serviços de saúde" />
+        <h3>Acesso a serviços de saúde</h3>
+        <p>Dificuldade em encontrar profissionais capacitados, falta de acesso a terapias e tratamentos adequados em rede pública.</p>
+      </article>
+      <article class="card" role="listitem">
+        <img src="desafiosEnfrentados (3).png" alt="Ilustração sobre inclusão no mercado de trabalho" />
+        <h3>Inclusão no mercado de trabalho</h3>
+        <p>Preconceito, falta de adaptação de postos de trabalho e dificuldades em comprovar a capacidade laboral são desafios enfrentados pelas pessoas com deficiência neurológica na busca por emprego.</p>
+      </article>
+      <article class="card" role="listitem">
+        <img src="desafiosEnfrentados.png" alt="Ilustração de acesso à educação" />
+        <h3>Acesso à educação</h3>
+        <p>A falta de recursos e profissionais qualificados, além de barreiras arquitetônicas, podem impedir a plena participação na educação, tanto em nível escolar quanto superior.</p>
+      </article>
+    </section>
+
+    <p> Fonte:
+      <a href="https://iigual.com.br/blog/inclusao-de-pessoas-com-deficiencia-na-sociedade/#:~:text=A%20falta%20de%20informa%C3%A7%C3%B5es%20%C3%A9,pol%C3%ADticas%20n%C3%A3o%20adequadas."
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Abrir artigo original sobre os desafios enfretados">
+        <strong> Iigual </strong>
+        </a>
+    </p>
+
+
+
+    <section class="secao-caixa" role="region" aria-labelledby="titulo-duvidas">
+      <h2 id="titulo-duvidas">Ficou alguma dúvida sobre o conteúdo?</h2>
+      <p>Clique no botão abaixo para <strong>entrar em contato conosco:</strong></p>
+      <button class="botao-contato" onclick="window.location.href='pagina3Formulario.html'" aria-label="Ir para a página de contato">
+        Entrar em Contato
+      </button>
+    </section>
+
+
+    <!-- Plugin VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Botão flutuante do menu de acessibilidade -->
+  <button id="btn-acessibilidade" aria-label="Abrir menu de acessibilidade" aria-haspopup="true" aria-controls="acessibilidade-opcoes" aria-expanded="false">
+    <i class="fas fa-universal-access" aria-hidden="true"></i>
+  </button>
+
+  <!-- Painel de opções de acessibilidade -->
+  <div id="acessibilidade-opcoes" role="region" aria-label="Opções de acessibilidade" tabindex="-1" style="display:none;">
+    <button onclick="alterarFonte(1.1)" aria-label="Aumentar fonte">A+</button>
+    <button onclick="alterarFonte(0.9)" aria-label="Diminuir fonte">A-</button>
+    <button onclick="alternarContraste()" aria-label="Alternar contraste">☯</button>
+  </div>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+    const video = document.getElementById("meuVideo");
+    document.getElementById("btnPlay").onclick = () => video.play();
+    document.getElementById("btnPause").onclick = () => video.pause();
+    document.getElementById("btnReiniciar").onclick = () => {
+      video.currentTime = 0;
+      video.pause();
+    };
+
+    const btnAcessibilidade = document.getElementById("btn-acessibilidade");
+    const painelAcessibilidade = document.getElementById("acessibilidade-opcoes");
+
+    btnAcessibilidade.addEventListener("click", () => {
+      const visivel = painelAcessibilidade.style.display === "block";
+      painelAcessibilidade.style.display = visivel ? "none" : "block";
+      btnAcessibilidade.setAttribute("aria-expanded", !visivel);
+      if (!visivel) {
+        painelAcessibilidade.focus();
+      }
+    });
+
+    function alterarFonte(fator) {
+      const corpo = document.body;
+      let fonteAtual = parseFloat(window.getComputedStyle(corpo).fontSize);
+      let novaFonte = fonteAtual * fator;
+
+      if (novaFonte < 12) novaFonte = 12;
+      if (novaFonte > 24) novaFonte = 24;
+
+      corpo.style.fontSize = novaFonte + "px";
+    }
+
+    function alternarContraste() {
+      document.documentElement.classList.toggle("contraste-alto");
+    }
+  </script>
+</body>
+</html>
